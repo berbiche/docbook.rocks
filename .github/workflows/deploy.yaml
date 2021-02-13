@@ -20,3 +20,4 @@ jobs:
         with:
           branch: gh-pages
           folder: result
+          clean: false
