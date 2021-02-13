@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>DocBook rocks!</title><link rel="stylesheet" type="text/css" href="docbook.css" /><link rel="stylesheet" type="text/css" href="style.css" /><script src="./highlightjs/highlight.pack.js" type="text/javascript"></script><script src="./highlightjs/loader.js" type="text/javascript"></script><meta name="generator" content="DocBook XSL Stylesheets V1.79.2" /><meta name="viewport" content="width=device-width, initial-scale=1" /></head><body><div class="book"><div class="titlepage"><div><div><h1 class="title"><a id="book-docbook-rocks"></a>DocBook rocks!</h1></div></div><hr /></div><div class="toc"><div class="toc-title">Table of Contents</div><dl class="toc"><dt><span class="chapter"><a href="#block-elements">1. Block Elements</a></span></dt><dd><dl><dt><span class="section"><a href="#paragraphs">1.1. Paragraphs and Line Breaks</a></span></dt><dt><span class="section"><a href="#headers">1.2. Headers</a></span></dt><dt><span class="section"><a href="#blockquotes">1.3. Blockquotes</a></span></dt><dt><span class="section"><a href="#lists">1.4. Lists</a></span></dt><dt><span class="section"><a href="#code-blocks">1.5. Code Blocks</a></span></dt></dl></dd><dt><span class="chapter"><a href="#span-elements">2. Span Elements</a></span></dt><dd><dl><dt><span class="section"><a href="#links">2.1. Links</a></span></dt><dt><span class="section"><a href="#emphasis">2.2. Emphasis</a></span></dt><dt><span class="section"><a href="#inline-code">2.3. Code</a></span></dt></dl></dd><dt><span class="chapter"><a href="#miscellaneous">3. Miscellaneous</a></span></dt><dd><dl><dt><span class="section"><a href="#special-characters">3.1. Escaping Special Characters</a></span></dt></dl></dd><dt><span class="chapter"><a href="#fancy-stuff">4. Fancy Stuff</a></span></dt><dd><dl><dt><span class="section"><a href="#prompt">4.1. Prompts in Command Lines</a></span></dt><dt><span class="section"><a href="#tables">4.2. Tables</a></span></dt></dl></dd></dl></div><div class="list-of-tables"><div class="toc-title">List of Tables</div><dl><dt>3.1. <a href="#escaping-characters"></a></dt><dt>4.1. <a href="#idm140737322552352"></a></dt></dl></div><div class="list-of-examples"><div class="toc-title">List of Examples</div><dl><dt>1.1. <a href="#idm140737322679072"></a></dt><dt>1.2. <a href="#idm140737322675136"></a></dt><dt>1.3. <a href="#idm140737322669936"></a></dt><dt>1.4. <a href="#idm140737322665904"></a></dt><dt>1.5. <a href="#idm140737322659664"></a></dt><dt>1.6. <a href="#idm140737322655664"></a></dt><dt>1.7. <a href="#idm140737322651184"></a></dt><dt>1.8. <a href="#idm140737322646544"></a></dt><dt>1.9. <a href="#codeblocks-xml-with-bash"></a></dt><dt>1.10. <a href="#idm140737322632880"></a></dt><dt>2.1. <a href="#idm140737322628192"></a></dt><dt>2.2. <a href="#idm140737322625040"></a></dt><dt>2.3. <a href="#idm140737322616496"></a></dt><dt>2.4. <a href="#idm140737322611968"></a></dt></dl></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="who-is-this-for"></a>1. Who this is for?</h2></div></div></div><p>
+     You want to write a page or two of documentation for your
+     favorite DocBook-using project, and didn't find or got spooked by
+     the extremely thorough and intimidating <a class="link" href="https://tdg.docbook.org/" target="_top">official documentation</a>.
+   </p><p>
+     This is a quick dive in to about ten DocBook tags which will let
+     you get going and documenting pretty much everything you need.
+     At the end is some fancier stuff you probably won't need.
+   </p><p>
+     You don't have to have ever used DocBook before, or plan to ever
+     use it again. My goal is to give you just enough knowledge to
+     contribute some docs to your favorite DockBook-using project.
+   </p></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="block-elements"></a>Chapter 1. Block Elements</h1></div></div></div><div class="toc"><div class="toc-title">Table of Contents</div><dl class="toc"><dt><span class="section"><a href="#paragraphs">1.1. Paragraphs and Line Breaks</a></span></dt><dt><span class="section"><a href="#headers">1.2. Headers</a></span></dt><dt><span class="section"><a href="#blockquotes">1.3. Blockquotes</a></span></dt><dt><span class="section"><a href="#lists">1.4. Lists</a></span></dt><dt><span class="section"><a href="#code-blocks">1.5. Code Blocks</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="paragraphs"></a>1.1. Paragraphs and Line Breaks</h3></div></div></div><div class="example"><a id="idm140737322679072"></a><div class="example-title">Example 1.1. </div><div class="example-contents"><pre class="programlisting">&lt;para&gt;
+  your text goes here! It isn't whitespace sensitive.
+  Feel free to break up your sentences in to
+
+  as many lines
+
+  as
+
+  you
+
+  like.
+
+&lt;/para&gt;
+</pre><div class="informalfigure"><p>
+  your text goes here! It isn't whitespace sensitive.
+  Feel free to break up your sentences in to
+
+  as many lines
+
+  as
+
+  you
+
+  like.
+
+</p></div></div></div><br class="example-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="headers"></a>1.2. Headers</h3></div></div></div><p>
+       DocBook automatically applies the right header for your
+       content, based on its <span class="emphasis"><em>nesting</em></span>.
+     </p><div class="example"><a id="idm140737322675136"></a><div class="example-title">Example 1.2. </div><div class="example-contents"><pre class="programlisting">&lt;section&gt;
+  &lt;title&gt;This is a section!&lt;/title&gt;
+  &lt;section&gt;
+    &lt;title&gt;And a sub-section!&lt;/title&gt;
+    &lt;section&gt;
+      &lt;title&gt;How low can we go?&lt;/title&gt;
+      &lt;section&gt;
+        &lt;title&gt;(let's not find out.)&lt;/title&gt;
+      &lt;/section&gt;
+    &lt;/section&gt;
+  &lt;/section&gt;
+&lt;/section&gt;
+</pre><div class="informalfigure"><div class="section"><div class="titlepage"><div><div><h6 class="title"><a id="idm140737322673936"></a>1. This is a section!</h6></div></div></div><div class="section"><div class="titlepage"><div><div><h6 class="title"><a id="idm140737322673264"></a>1.1. And a sub-section!</h6></div></div></div><div class="section"><div class="titlepage"><div><div><h6 class="title"><a id="idm140737322672544"></a>1.1.1. How low can we go?</h6></div></div></div><div class="section"><div class="titlepage"><div><div><h5 class="title"><a id="idm140737322671824"></a>1.1.1.1. (let's not find out.)</h5></div></div></div></div></div></div></div></div></div></div><br class="example-break" /><p>
+       Sometimes, you may want a subtitle. DocBook supports that!
+     </p><div class="example"><a id="idm140737322669936"></a><div class="example-title">Example 1.3. </div><div class="example-contents"><pre class="programlisting">&lt;section&gt;
+  &lt;title&gt;My Cool Document&lt;/title&gt;
+  &lt;subtitle&gt;Publishing formats can be fun!&lt;/subtitle&gt;
+&lt;/section&gt;
+</pre><div class="informalfigure"><div class="section"><div class="titlepage"><div><div><h6 class="title"><a id="idm140737322668960"></a>1. My Cool Document</h6></div><div><h6 class="subtitle">Publishing formats can be fun!</h6></div></div></div></div></div></div></div><br class="example-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="blockquotes"></a>1.3. Blockquotes</h3></div></div></div><p>Blockqoutes are easy, and support a lot of the other
+     elements, too:</p><div class="example"><a id="idm140737322665904"></a><div class="example-title">Example 1.4. </div><div class="example-contents"><pre class="programlisting">&lt;blockquote&gt;
+  &lt;attribution&gt;
+    &lt;link xlink:href="https://opensource.com/article/17/9/docbook"&gt;opensource.com&lt;/link&gt;
+  &lt;/attribution&gt;
+  &lt;para&gt;
+    learn the basics in the first few minutes,
+    and keep a reference handy to learn more
+    as needed.
+  &lt;/para&gt;
+&lt;/blockquote&gt;
+</pre><div class="informalfigure"><div class="blockquote"><table border="0" class="blockquote" style="width: 100%; cellspacing: 0; cellpadding: 0;" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>
+    learn the basics in the first few minutes,
+    and keep a reference handy to learn more
+    as needed.
+  </p></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
+    <a class="link" href="https://opensource.com/article/17/9/docbook" target="_top">opensource.com</a>
+  </span></td></tr></table></div></div></div></div><br class="example-break" /><div class="note"><h3 class="title">Note</h3><p>
+         Where the author of the quote is displayed is up to the
+         rendering of the documentation. It is common to put the
+         attribution first, but not necessary. If I had put the
+         attribution after the paragraph, it would have displayed the
+         same way.
+       </p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="lists"></a>1.4. Lists</h3></div></div></div><p>
+       DocBook supports bulleted and numbered lists.
+     </p><div class="example"><a id="idm140737322659664"></a><div class="example-title">Example 1.5. </div><div class="example-contents"><pre class="programlisting">&lt;itemizedlist&gt;
+  &lt;listitem&gt;
+    &lt;para&gt;
+      Red
+    &lt;/para&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;para&gt;
+      Blue
+    &lt;/para&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;para&gt;
+      Green
+    &lt;/para&gt;
+  &lt;/listitem&gt;
+&lt;/itemizedlist&gt;
+</pre><div class="informalfigure"><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+      Red
+    </p></li><li class="listitem"><p>
+      Blue
+    </p></li><li class="listitem"><p>
+      Green
+    </p></li></ul></div></div></div></div><br class="example-break" /><div class="example"><a id="idm140737322655664"></a><div class="example-title">Example 1.6. </div><div class="example-contents"><pre class="programlisting">&lt;orderedlist&gt;
+  &lt;listitem&gt;
+    &lt;para&gt;
+      Norman Walsh
+    &lt;/para&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;para&gt;
+      Jon Bosak
+    &lt;/para&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;para&gt;
+      Dale Dougherty
+    &lt;/para&gt;
+  &lt;/listitem&gt;
+&lt;/orderedlist&gt;
+</pre><div class="informalfigure"><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
+      Norman Walsh
+    </p></li><li class="listitem"><p>
+      Jon Bosak
+    </p></li><li class="listitem"><p>
+      Dale Dougherty
+    </p></li></ol></div></div></div></div><br class="example-break" /><p>or a list with multiple paragraphs:</p><div class="example"><a id="idm140737322651184"></a><div class="example-title">Example 1.7. </div><div class="example-contents"><pre class="programlisting">&lt;orderedlist&gt;
+  &lt;listitem&gt;
+    &lt;para&gt;
+      This is a list item with two paragraphs.
+    &lt;/para&gt;
+
+    &lt;para&gt;
+      This is the second paragraph in the list
+      item, you don't have to do anything special
+      here but keep adding para tags :)
+    &lt;/para&gt;
+  &lt;/listitem&gt;
+  &lt;listitem&gt;
+    &lt;para&gt;
+      Another item in the same list.
+    &lt;/para&gt;
+  &lt;/listitem&gt;
+&lt;/orderedlist&gt;
+</pre><div class="informalfigure"><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p>
+      This is a list item with two paragraphs.
+    </p><p>
+      This is the second paragraph in the list
+      item, you don't have to do anything special
+      here but keep adding para tags :)
+    </p></li><li class="listitem"><p>
+      Another item in the same list.
+    </p></li></ol></div></div></div></div><br class="example-break" /><p>or a list with a blockquote:</p><div class="example"><a id="idm140737322646544"></a><div class="example-title">Example 1.8. </div><div class="example-contents"><pre class="programlisting">&lt;orderedlist&gt;
+  &lt;listitem&gt;
+    &lt;blockquote&gt;
+      &lt;attribution&gt;
+        &lt;link xlink:href="http://www.tldp.org/HOWTO/DocBook-Demystification-HOWTO/x57.html"&gt;Why care about DocBook at all?&lt;/link&gt;
+      &lt;/attribution&gt;
+      &lt;para&gt;
+        There are two possibilities that make DocBook
+        really interesting. One is multi-mode
+        rendering and the other is searchable
+        documentation databases.
+      &lt;/para&gt;
+    &lt;/blockquote&gt;
+  &lt;/listitem&gt;
+&lt;/orderedlist&gt;
+</pre><div class="informalfigure"><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><div class="blockquote"><table border="0" class="blockquote" style="width: 100%; cellspacing: 0; cellpadding: 0;" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>
+        There are two possibilities that make DocBook
+        really interesting. One is multi-mode
+        rendering and the other is searchable
+        documentation databases.
+      </p></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
+        <a class="link" href="http://www.tldp.org/HOWTO/DocBook-Demystification-HOWTO/x57.html" target="_top">Why care about DocBook at all?</a>
+      </span></td></tr></table></div></li></ol></div></div></div></div><br class="example-break" /><div class="note"><h3 class="title">Note</h3><p>
+       The <code class="literal">&lt;listitem&gt;</code> can't contain text
+       directly inside of it. If you want to include text, use a
+       <code class="literal">&lt;para&gt;</code>. You could also use a
+       <code class="literal">&lt;blockquote&gt;</code> or
+       <code class="literal">&lt;programlisting&gt;</code> or many other
+       options.
+     </p></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="code-blocks"></a>1.5. Code Blocks</h3></div></div></div><div class="example"><a id="codeblocks-xml-with-bash"></a><div class="example-title">Example 1.9. </div><div class="example-contents"><pre class="programlisting">&lt;programlisting&gt;
+#!/bin/sh
+git clone https://github.com/grahamc/docbook.rocks.git
+&lt;/programlisting&gt;
+</pre><div class="informalfigure"><pre class="programlisting">
+#!/bin/sh
+git clone https://github.com/grahamc/docbook.rocks.git
+</pre></div></div></div><br class="example-break" /><div class="note"><h3 class="title">Note</h3><p>
+         If you'll have a lot of <code class="literal">&lt;</code>s,
+         <code class="literal">&gt;</code>s, or <code class="literal">&amp;</code>s like
+         you're embedding a bunch of XML or HTML, you'll probably want
+         to use a <code class="literal">CDATA</code> section instead of <a class="link" href="#special-characters" title="3.1. Escaping Special Characters">escaping them all</a>:
+       </p><div class="example"><a id="idm140737322632880"></a><div class="example-title">Example 1.10. </div><div class="example-contents"><pre class="programlisting">&lt;programlisting&gt;&lt;![CDATA[
+&lt;para&gt;
+  No need to escape each &lt; &gt; or &amp;
+&lt;/para&gt;
+]]&gt;&lt;/programlisting&gt;
+</pre><div class="informalfigure"><pre class="programlisting">
+&lt;para&gt;
+  No need to escape each &lt; &gt; or &amp;
+&lt;/para&gt;
+</pre></div></div></div><br class="example-break" /></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="span-elements"></a>Chapter 2. Span Elements</h1></div></div></div><div class="toc"><div class="toc-title">Table of Contents</div><dl class="toc"><dt><span class="section"><a href="#links">2.1. Links</a></span></dt><dt><span class="section"><a href="#emphasis">2.2. Emphasis</a></span></dt><dt><span class="section"><a href="#inline-code">2.3. Code</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="links"></a>2.1. Links</h3></div></div></div><p>
+       DocBook supports normal URL links:
+     </p><div class="example"><a id="idm140737322628192"></a><div class="example-title">Example 2.1. </div><div class="example-contents"><pre class="programlisting">&lt;para&gt;
+  If you're a bit freaked out by DocBook, check out
+  &lt;link xlink:href="https://docbook.rocks"&gt;DocBook
+  Rocks&lt;/link&gt; for a really gentle introduction, and
+  a "just-the-basics" look at how to be productive
+  with DocBook.
+&lt;/para&gt;
+</pre><div class="informalfigure"><p>
+  If you're a bit freaked out by DocBook, check out
+  <a class="link" href="https://docbook.rocks" target="_top">DocBook
+  Rocks</a> for a really gentle introduction, and
+  a "just-the-basics" look at how to be productive
+  with DocBook.
+</p></div></div></div><br class="example-break" /><p>
+       and also has a special method for linking within the same
+       document:
+     </p><div class="example"><a id="idm140737322625040"></a><div class="example-title">Example 2.2. </div><div class="example-contents"><pre class="programlisting">&lt;section&gt;
+  &lt;section xml:id="section-one"&gt;
+    &lt;title&gt;A nice section demonstrating linking
+    inside the same document&lt;/title&gt;
+    &lt;para&gt;
+      Definitely go check out
+      &lt;xref linkend="section-two" /&gt;!
+    &lt;/para&gt;
+  &lt;/section&gt;
+
+  &lt;section xml:id="section-two"&gt;
+    &lt;title&gt;Another section, look at that!&lt;/title&gt;
+  &lt;/section&gt;
+&lt;/section&gt;
+</pre><div class="informalfigure"><div class="section"><div class="titlepage"></div><div class="section"><div class="titlepage"><div><div><h6 class="title"><a id="section-one"></a>1.1. A nice section demonstrating linking
+    inside the same document</h6></div></div></div><p>
+      Definitely go check out
+      <a class="xref" href="#section-two" title="1.2. Another section, look at that!">Section 1.2, “Another section, look at that!”</a>!
+    </p></div><div class="section"><div class="titlepage"><div><div><h6 class="title"><a id="section-two"></a>1.2. Another section, look at that!</h6></div></div></div></div></div></div></div></div><br class="example-break" /><p>
+       The name <code class="literal">&lt;xref&gt;</code> may be a bit weird of
+       a name at first. Maybe remembering it like a
+       <span class="emphasis"><em>crossreference</em></span> will help.
+     </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="emphasis"></a>2.2. Emphasis</h3></div></div></div><p>
+       DocBook documents typically only italicize for emphasis, though
+       this is depends on how you process your document.
+     </p><div class="example"><a id="idm140737322616496"></a><div class="example-title">Example 2.3. </div><div class="example-contents"><pre class="programlisting">&lt;para&gt;
+  DocBook has a whole lot of tags, but you
+  probably don't need them
+  &lt;emphasis&gt;all&lt;/emphasis&gt;. Don't be scared
+  off by them if you look at the official
+  documentation.
+&lt;/para&gt;
+</pre><div class="informalfigure"><p>
+  DocBook has a whole lot of tags, but you
+  probably don't need them
+  <span class="emphasis"><em>all</em></span>. Don't be scared
+  off by them if you look at the official
+  documentation.
+</p></div></div></div><br class="example-break" /></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="inline-code"></a>2.3. Code</h3></div></div></div><p>
+       To write a bit of code inside a paragraph, wrap it in
+       <code class="literal">&lt;literal&gt;&lt;/literal&gt;</code>:
+     </p><div class="example"><a id="idm140737322611968"></a><div class="example-title">Example 2.4. </div><div class="example-contents"><pre class="programlisting">&lt;para&gt;
+  Print to the screen with the
+  &lt;literal&gt;printf()&lt;/literal&gt; function.
+&lt;/para&gt;
+</pre><div class="informalfigure"><p>
+  Print to the screen with the
+  <code class="literal">printf()</code> function.
+</p></div></div></div><br class="example-break" /></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="miscellaneous"></a>Chapter 3. Miscellaneous</h1></div></div></div><div class="toc"><div class="toc-title">Table of Contents</div><dl class="toc"><dt><span class="section"><a href="#special-characters">3.1. Escaping Special Characters</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="special-characters"></a>3.1. Escaping Special Characters</h3></div></div></div><p>
+       DocBook requires the author to escape a few symbols, depending
+       on where you are using them.
+     </p><div class="table"><a id="escaping-characters"></a><table id="escaping-characters"><thead><tr>
+           <th>Symbol</th>
+           <th>How to type it instead</th>
+           <th>When</th>
+         </tr></thead><tbody><tr>
+           <td><code class="literal">&lt;</code></td>
+           <td><p><code class="literal">&amp;lt;</code></p><p>as in <span class="emphasis"><em>less than</em></span></p></td>
+           <td>Everywhere in your document.</td>
+         </tr><tr>
+           <td><code class="literal">&gt;</code></td>
+           <td><p><code class="literal">&amp;gt;</code></p><p>as in <span class="emphasis"><em>greater than</em></span></p></td>
+           <td>Everywhere in your document.</td>
+         </tr><tr>
+           <td><code class="literal">&amp;</code></td>
+           <td><p><code class="literal">&amp;amp;</code></p><p> as in <span class="emphasis"><em>ampersand</em></span></p></td>
+           <td>Everywhere in your document.</td>
+         </tr><tr>
+           <td><code class="literal">"</code></td>
+           <td><p><code class="literal">&amp;quot;</code></p><p>as in <span class="emphasis"><em>quote</em></span></p></td>
+           <td>Only inside attributes using a double quote, like <code class="literal">&lt;foo
+           xlink:title="a &amp;quot;can do&amp;quot; attitude!"&gt;</code>.</td>
+         </tr><tr>
+           <td><code class="literal">'</code></td>
+           <td><p><code class="literal">&amp;apos;</code></p><p>as in <span class="emphasis"><em>apostrophe</em></span></p></td>
+           <td>Only inside attributes using a single quote, like <code class="literal">&lt;foo
+           xlink:title='it isn&amp;apos;t impossible!'&gt;</code>.</td>
+         </tr></tbody></table></div></div></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="fancy-stuff"></a>Chapter 4. Fancy Stuff</h1></div></div></div><div class="toc"><div class="toc-title">Table of Contents</div><dl class="toc"><dt><span class="section"><a href="#prompt">4.1. Prompts in Command Lines</a></span></dt><dt><span class="section"><a href="#tables">4.2. Tables</a></span></dt></dl></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="prompt"></a>4.1. Prompts in Command Lines</h3></div></div></div><p>
+       Copy and paste the following commands:
+     </p><pre class="screen">
+<code class="prompt">$ </code>git clone https://github.com/grahamc/docbook.rocks.git
+<code class="prompt">$ </code>cd docbook.rocks
+</pre><p>
+       You'll notice you only copied the commands, and not the
+       prompt's <code class="literal">$ </code>.
+     </p><div class="note"><h3 class="title">Note</h3><p>
+         We've just learned about the <code class="literal">&lt;screen&gt;</code>
+         tag. A <code class="literal">&lt;screen&gt;</code> tag is like a
+         <code class="literal">&lt;programlisting&gt;</code> except it is
+         intended to show the text in a terminal window.
+       </p></div><p>
+       With Markdown you might imagine having a special fenced
+       codeblock, like
+
+       </p><pre class="programlisting">
+```shell-commands
+git clone https://github.com/grahamc/docbook.rocks.git
+cd docbook.rocks
+```</pre><p>
+
+       and having it automatically prefix the lines with an
+       unselectable <code class="literal">$ </code>. This would be interesting,
+       but undesirable because you wouldn't want
+
+       </p><pre class="programlisting">
+```shell-commands
+git clone https://github.com/grahamc/docbook.rocks.git
+Cloning into 'docbook.rocks'...
+remote: Counting objects: 52, done.
+remote: Compressing objects: 100% (36/36), done.
+remote: Total 52 (delta 19), reused 48 (delta 15), pack-reused 0
+Unpacking objects: 100% (52/52), done.
+```</pre><p>
+
+       to turn in to
+
+              </p><pre class="programlisting">
+```shell-commands
+$ git clone https://github.com/grahamc/docbook.rocks.git
+$ Cloning into 'docbook.rocks'...
+$ remote: Counting objects: 52, done.
+$ remote: Compressing objects: 100% (36/36), done.
+$ remote: Total 52 (delta 19), reused 48 (delta 15), pack-reused 0
+$ Unpacking objects: 100% (52/52), done.
+```</pre><p>
+     </p><p>
+       You might imagine having your parser detect the existing
+       prompts and fix them:
+
+       </p><pre class="programlisting">
+```shell-commands
+$ git clone https:/b/github.com/grahamc/docbook.rocks.git
+Cloning into 'docbook.rocks'...
+remote: Counting objects: 52, done.
+remote: Compressing objects: 100% (36/36), done.
+remote: Total 52 (delta 19), reused 48 (delta 15), pack-reused 0
+Unpacking objects: 100% (52/52), done.
+$ cd docbook.rocks
+``` </pre><p>
+
+       having it automatically change the <code class="literal">$ </code> to be
+       unselectable.
+     </p><p>
+       But what about if your prompt changes, like
+
+       </p><pre class="programlisting">
+$ su -i
+# </pre><p>
+
+       sure you could detect <code class="literal">#</code> too... but what
+       about something fancier, like:
+       </p><pre class="programlisting">
+$ git clone https:/b/github.com/grahamc/docbook.rocks.git
+Cloning into 'docbook.rocks'...
+remote: Counting objects: 52, done.
+remote: Compressing objects: 100% (36/36), done.
+remote: Total 52 (delta 19), reused 48 (delta 15), pack-reused 0
+Unpacking objects: 100% (52/52), done.
+$ cd docbook.rocks
+$ nix-shell
+[nix-shell:~/docbook.rocks]$
+</pre><p>
+
+       Having your markdown processer handle each of these cases is
+       quite complicated, and we haven't even addressed cases where
+       the prompt may be inside of another program.
+     </p><p>
+       With DocBook, there is an optional, built-in tag to explicitly
+       mark the prompt:
+
+       </p><pre class="programlisting">&lt;screen&gt;
+&lt;prompt&gt;$ &lt;/prompt&gt;git clone https://github.com/grahamc/docbook.rocks.git
+&lt;prompt&gt;$ &lt;/prompt&gt;cd docbook.rocks
+&lt;/screen&gt;
+</pre><p>
+     </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a id="tables"></a>4.2. Tables</h3></div></div></div><p>
+       If you've done any HTML, you'll have no trouble with DocBook
+       tables.
+     </p><pre class="programlisting">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Writing Format&lt;/th&gt;
+      &lt;th&gt;How good it is&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;DocBook&lt;/td&gt;
+      &lt;td&gt;Really good!&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MarkDown&lt;/td&gt;
+      &lt;td&gt;Pretty great!&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LaTeX&lt;/td&gt;
+      &lt;td&gt;Great for computer scientists!&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre><div class="informalfigure"><div class="table"><table><thead><tr>
+      <th>Writing Format</th>
+      <th>How good it is</th>
+    </tr></thead><tbody><tr>
+      <td>DocBook</td>
+      <td>Really good!</td>
+    </tr><tr>
+      <td>MarkDown</td>
+      <td>Pretty great!</td>
+    </tr><tr>
+      <td>LaTeX</td>
+      <td>Great for computer scientists!</td>
+    </tr></tbody></table></div></div></div></div><div class="colophon"><h1 class="title"><a id="idm140737322546112"></a>Colophon</h1><p>
+      Built with <a class="link" href="https://nixos.org/nix" target="_top">Nix</a>,
+      DocBook, and HighlighterJS. The text is authored by
+      <span class="author"><span class="firstname">Graham</span> <span class="surname">Christensen</span></span>.
+      The source can be found at <a class="link" href="https://github.com/grahamc/docbook.rocks" target="_top">https://github.com/grahamc/docbook.rocks</a>. This document is licensed CC-BY-SA-4.0.
+    </p></div></div></body></html>

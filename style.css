@@ -1,0 +1,198 @@
+body {
+    line-height: 1.7;
+    font-size: 17px;
+    margin: 0;
+    overflow-wrap: break-word
+}
+
+code {
+    overflow-wrap: break-word;
+}
+
+.prompt {
+    user-select: none;
+    -moz-user-select: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.note {
+    background-color: #fffde0;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-left: 1em solid #fcf6b4;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+code.literal, code.varname {
+    background-color: #dcdcdc66;
+}
+
+.programlisting, .screen {
+    color: white;
+    background-color: #282c34;
+    border-radius: .5em;
+
+    padding-left: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-right: .5em;
+
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-name,
+.hljs-attr,
+.hljs-strong {
+    color: #c5a5c5;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-section,
+.hljs-built_in,
+.hljs-literal,
+.hljs-type,
+.hljs-addition,
+.hljs-tag,
+.hljs-quote,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+    color: #9bc977;
+}
+
+.hljs-meta,
+.hljs-subst,
+.hljs-symbol,
+.hljs-regexp,
+.hljs-attribute,
+.hljs-deletion,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-bullet {
+    color: #4c81c9;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+
+h1.title {
+    font-size: 3em;
+    font-weight: bolder;
+    color: #282c34;
+}
+
+body {
+    width: 100%;
+    font-family: helvetica;
+}
+
+
+@media only screen and (max-width: 949px) {
+    .book {
+        width: 95%;
+        overflow-wrap: auto;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .programlisting, .screen {
+        margin-right:1em;
+    }
+}
+
+
+@media only screen and (min-width: 950px) {
+    .book {
+        width: 50%;
+        margin-left: 20%;
+        margin-right: auto;
+    }
+    .note {
+        margin-left: -2.5em;
+    }
+
+    div.book > div.toc {
+        display: block;
+        width: 20%;
+        float: right;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: auto;
+        background-color: #f7f7f7;
+        padding-left: 1em;
+    }
+
+    table#escaping-characters td {
+        padding-right : 3em;
+    }
+}
+
+.list-of-examples, .list-of-tables, .toc-title {
+    display: none;
+}
+
+.chapter > .toc {
+    display: none;
+}
+
+.note .programlisting, .note .screen {
+    /* Program listings inside of a note would blow out the note box. */
+    margin-left: auto;
+    margin-right: 1em;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+table td {
+    border-top: 1px solid black;
+}
+
+table#escaping-characters th:nth-child(1) {
+    width: 20%;
+}
+
+table#escaping-characters th:nth-child(2) {
+    width: 30%;
+}
+
+
+img {
+    height: 1em;
+    margin-bottom: -0.25em;
+    padding-left: .5em;
+}
+
+.informalfigure {
+    border-left: .5em solid #cae0a9;
+    padding-left: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.informalfigure .programlisting {
+    margin-left: 1em;
+}
+
+.note .informalfigure {
+    padding-left: .5em;
+}
